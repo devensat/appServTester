@@ -53,6 +53,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/cfaProj1/testCases/TC002_GET_tabMetrics_contactEvents_topNews.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/java/log4j.properties">
           <value>
             <set />
