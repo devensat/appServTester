@@ -7,14 +7,14 @@ import io.restassured.config.RestAssuredConfig;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
-
 import io.restassured.http.ContentType;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-
+import org.hamcrest.Matchers;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Rule;
@@ -23,14 +23,13 @@ import org.junit.rules.TestWatcher;
 
 import java.io.PrintStream;
 
-import static org.hamcrest.Matchers.*;
-
-
 
     public class TC001_GET_Status {
 
         @Test
         public void test_APIwithBasicAuthentication_ShouldBeGivenAccess() {
+
+
             RestAssured.given().
                     header("CFA-WS-Client-ID", "test_wsc_cfanow_mobile").
                     auth().
@@ -40,10 +39,11 @@ import static org.hamcrest.Matchers.*;
                     when().
                     get("https://api.coreservice-test.cfadevelop.com/contacts-api/v1/contact-event?userId=bailey.littrell1&locationNumbers=02206&processDate=2019-11-11").
 
-
                     then().
                     assertThat().
                     statusCode(200);// 200 Success Status Code
+
+
 
         }
 
@@ -61,6 +61,8 @@ import static org.hamcrest.Matchers.*;
         private RestAssured given() {
             return null;
         }
+
+
 
 
     }

@@ -58,7 +58,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/cfaProj1/testCases/TC003_GET_BodyValidation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/java/log4j.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/target/test-classes/com/cfaProj1/testCases/TC001_GET_Status.class">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/target/test-classes/com/cfaProj1/testCases/TC002_GET_tabMetrics_contactEvents_topNews.class">
           <value>
             <set />
           </value>
