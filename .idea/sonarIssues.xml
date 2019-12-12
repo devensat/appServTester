@@ -63,6 +63,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/wallBoardProj1/testCases/TC001_WB_GET_Status.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/wallBoardProj1/testCases/TC002_WB_GET_bodyValidations.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/wallBoardProj1/testCases/TC003_WB_GET_tipsAndAlerts.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/wallBoardProj1/testCases/TC_CMN001_Auth.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/java/log4j.properties">
           <value>
             <set />
