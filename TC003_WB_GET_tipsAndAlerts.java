@@ -7,12 +7,10 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.Test;
 import org.testng.Assert;
 
-import java.util.logging.Logger;
-
 
 public class TC003_WB_GET_tipsAndAlerts {
 
-    private final Logger logger = Logger.getAnonymousLogger();
+    //private final Logger logger = Logger.getAnonymousLogger();
 
     @Test
     public void test_foodSafetyAPI_tip() {
@@ -22,7 +20,7 @@ public class TC003_WB_GET_tipsAndAlerts {
             RequestSpecification httpRequest = RestAssured.given();
             httpRequest.header("CFA-WS-Client-ID", "test_wsc_cfanow_mobile")
                     .auth()
-                    .oauth2("eyJhbGciOiJSUzI1NiIsImtpZCI6IlFhcXcwOUl2cXBtNGwyRHZDeTJJdzgxazFocEsyaTMyOVZhS1JMaUFOWEwifQ.eyJjZmFfYXVkIjoiT1BFUkFUT1JfQVVESUVOQ0UiLCJjZmFfZ3VpZCI6IjYxNDMyMzRhYTJlYTVjNGNiNjhhNzE3NGI2ZmIxYWQ3IiwiY2ZhX2xvY19saXN0IjpbIjAwMTAyIiwiMDE0MzciLCIwMjIwNiJdLCJjZmFfcGVybXMiOnsiQ0ZBTk9XX01PQklMRSI6eyJMT0dJTiI6WyIwMDEwMiIsIjAxNDM3IiwiMDIyMDYiXSwiUkVTVEFVUkFOVCI6WyIwMDEwMiIsIjAxNDM3IiwiMDIyMDYiXSwiVE1fUEhPVE9fVVBMT0FEIjpbIjAwMTAyIiwiMDE0MzciLCIwMjIwNiJdfSwiT0JJIjp7IkRURVIiOlsiMDAxMDIiLCIwMTQzNyIsIjAyMjA2Il0sIkVYUEVOU0UiOlsiMDAxMDIiLCIwMTQzNyIsIjAyMjA2Il0sIkxPR0lOIjpbIjAwMTAyIiwiMDE0MzciLCIwMjIwNiJdLCJPUEVSIjpbIjAwMTAyIiwiMDE0MzciLCIwMjIwNiJdLCJPUEVSQVRPUl9MT0dJTiI6WyIwMDEwMiIsIjAxNDM3IiwiMDIyMDYiXSwiUEVSRiI6WyIwMDEwMiIsIjAxNDM3IiwiMDIyMDYiXSwiVE1BVkdQQVkiOlsiMDAxMDIiLCIwMTQzNyIsIjAyMjA2Il0sIlRNUEFZIjpbIjAwMTAyIiwiMDE0MzciLCIwMjIwNiJdLCJUTV9MT0dJTiI6WyIwMDEwMiIsIjAxNDM3IiwiMDIyMDYiXX0sIldBTExCT0FSRF9NT0JJTEUiOnsiTE9HSU4iOlsiMDAxMDIiLCIwMTQzNyIsIjAyMjA2Il19fSwiZW1haWwiOiJqZWZmLnN0cnlrZXJAY2ZhZnJhbmNoaXNlZS5jb20iLCJleHAiOjE1NzYwOTY0MzQsImZhbWlseV9uYW1lIjoiU3RyeWtlciIsImlhdCI6MTU3NjA5MjgzNCwiaXNzIjoiaHR0cHM6Ly9hdXRoLmlkbS10ZXN0LmNmYWRldmVsb3AuY29tIiwianRpIjoiNmNjYjhmZjMtYTE3Mi00MmI2LWEzNzAtMmVmOWQzZjdhMGRmIiwibmlja25hbWUiOiJKZWZmIiwic3ViIjoiamVmZi5zdHJ5a2VyIn0.Ml-OTOT-oAyjanthUevfUBOTLMl8zXGJedx0-q-wM2oiZpTfyHyGVr0g1xoI9wFmaIUB9b0MRmaD51w9QHCXbdNzQ7oUj2JDEPVKwdyCNs9U9c-AsVn7xzbdyIKCR9IoGhi16QpWki9bN-MwzJZmJcb6eMy9oijeXgK6r_27NL2SmPID-EUUzhF36ZFgl_pLmmNgJPo0foV_LzGTsmc2w1XsZN7LyV5cH8ePEAo0QFkvV5kPBbMfZh-4wExSROy-FKi5We75-8l1YTs0gPyUFb-LTvEHux70aeAomsz5lKaAiNadk--QXqEKHng13DHu_JNVgOhLG66LYQMYulD89Q").
+                    .oauth2("eyJhbGciOiJSUzI1NiIsImtpZCI6IlFhcXcwOUl2cXBtNGwyRHZDeTJJdzgxazFocEsyaTMyOVZhS1JMaUFOWEwifQ.eyJjZmFfYXVkIjoiT1BFUkFUT1JfQVVESUVOQ0UiLCJjZmFfZ3VpZCI6IjYxNDMyMzRhYTJlYTVjNGNiNjhhNzE3NGI2ZmIxYWQ3IiwiY2ZhX2xvY19saXN0IjpbIjAwMTAyIiwiMDE0MzciLCIwMjIwNiJdLCJjZmFfcGVybXMiOnsiQ0ZBTk9XX01PQklMRSI6eyJMT0dJTiI6WyIwMDEwMiIsIjAxNDM3IiwiMDIyMDYiXSwiUkVTVEFVUkFOVCI6WyIwMDEwMiIsIjAxNDM3IiwiMDIyMDYiXSwiVE1fUEhPVE9fVVBMT0FEIjpbIjAwMTAyIiwiMDE0MzciLCIwMjIwNiJdfSwiT0JJIjp7IkRURVIiOlsiMDAxMDIiLCIwMTQzNyIsIjAyMjA2Il0sIkVYUEVOU0UiOlsiMDAxMDIiLCIwMTQzNyIsIjAyMjA2Il0sIkxPR0lOIjpbIjAwMTAyIiwiMDE0MzciLCIwMjIwNiJdLCJPUEVSIjpbIjAwMTAyIiwiMDE0MzciLCIwMjIwNiJdLCJPUEVSQVRPUl9MT0dJTiI6WyIwMDEwMiIsIjAxNDM3IiwiMDIyMDYiXSwiUEVSRiI6WyIwMDEwMiIsIjAxNDM3IiwiMDIyMDYiXSwiVE1BVkdQQVkiOlsiMDAxMDIiLCIwMTQzNyIsIjAyMjA2Il0sIlRNUEFZIjpbIjAwMTAyIiwiMDE0MzciLCIwMjIwNiJdLCJUTV9MT0dJTiI6WyIwMDEwMiIsIjAxNDM3IiwiMDIyMDYiXX0sIldBTExCT0FSRF9NT0JJTEUiOnsiTE9HSU4iOlsiMDAxMDIiLCIwMTQzNyIsIjAyMjA2Il19fSwiZW1haWwiOiJqZWZmLnN0cnlrZXJAY2ZhZnJhbmNoaXNlZS5jb20iLCJleHAiOjE1ODA0OTkzNDAsImZhbWlseV9uYW1lIjoiU3RyeWtlciIsImlhdCI6MTU4MDQ5NTc0MCwiaXNzIjoiaHR0cHM6Ly9hdXRoLmlkbS10ZXN0LmNmYWRldmVsb3AuY29tIiwianRpIjoiNmNlNDVmYjMtYzc3MC00NzNkLWJkYmEtMjAwMDllNjBlZWRlIiwibmlja25hbWUiOiJKZWZmIiwic3ViIjoiamVmZi5zdHJ5a2VyIn0.xlkA1JB1cJZZqNzKu00fjao_PUpKf4PSqwANKFr0YJa1uIRiDmnbeFQz5d_VqUtZ3svratyG-zkUCie6p6M8-VS4PRXtKZRteZM3emOnJajXtIfMyykqtYuxkLikF64CF0LgsE91lUmxtvZiPBzrcOJqEeo-MJyi2hMb0AwnEzhYW1u5_9ydLaqrHH7vvNicWFWNJoRunLusxo31WYOYpIMexl0Q342t5e3xWcsAtHCRTrk7D1Xm-Pqy9RI_dHIAn_EVN735svsRevb8pKrfafY4HzCqzg2krAaXFcAchLx3O-MOjqPQb407XCnxwqd0ZSRs0Av_5v7Wsl__JlQRTw").
 
          when();
             Response response = httpRequest.get("https://wallboard-api.coreservice-test.cfadevelop.com/v1/tips/02206?categories=tip");
@@ -38,8 +36,8 @@ public class TC003_WB_GET_tipsAndAlerts {
                 statusCode(200);
         Assert.
                 assertNotNull(bodyStringValue);
-        Assert.assertTrue(bodyStringValue.contains("businessCategory\":\"foodsafety"));
-        Assert.assertTrue(bodyStringValue.contains("title\":\"FS80"));
+        Assert.assertTrue(bodyStringValue.contains("businessCategory\":\"foo"));
+        Assert.assertTrue(bodyStringValue.contains("\"informationCategory\":\"ti"));
 
         System.out.println("Response Body - >: "+bodyStringValue);
 
